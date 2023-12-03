@@ -14,7 +14,7 @@ execute:
 
 html:
   favicon: favicon.ico
-     use_repository_button: true
+  use_repository_button: true
     #  use_issues_button: true
 
 # Define the name of the latex output file for PDF builds
@@ -28,5 +28,5 @@ sphinx:
 
 # Information about where the book exists on the web
 repository:
- url: alexdelfranco.github.io/radius-valley # Online location of your book
+  url: https://github.com/alexdelfranco/radius-valley.git # Online location of your book
 
