@@ -22,6 +22,10 @@ latex:
   latex_documents:
     targetname: book.tex
 
+sphinx:
+  html_context:
+    default_mode: light
+
 # Information about where the book exists on the web
 # repository:
 #  url:  # Online location of your book
