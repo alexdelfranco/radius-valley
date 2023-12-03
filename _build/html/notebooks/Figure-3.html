@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Figure 1: Kepler 36c Histogram &#8212; Modeling Radius Valley Emergence Mechanisms With Multi-Transiting Systems</title>
+    <title>Figure 3: Kepler 36c Histogram &#8212; Modeling Radius Valley Emergence Mechanisms With Multi-Transiting Systems</title>
   
   
   
@@ -170,9 +170,8 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Figure-2.html">Figure 2: Planetary Pairs with Measured Masses Plot</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Figure 1: Kepler 36c Histogram</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Figure 3: Kepler 36c Histogram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Figures-4-and-5.html">Figures 4 and 5: System Architectures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Figures-6-and-7.html">Figures 6 and 7: Violin Plots</a></li>
 </ul>
 
     </div>
@@ -311,7 +310,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Figure 1: Kepler 36c Histogram</h1>
+    <h1>Figure 3: Kepler 36c Histogram</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -335,8 +334,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="figure-1-kepler-36c-histogram">
-<h1>Figure 1: Kepler 36c Histogram<a class="headerlink" href="#figure-1-kepler-36c-histogram" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="figure-3-kepler-36c-histogram">
+<h1>Figure 3: Kepler 36c Histogram<a class="headerlink" href="#figure-3-kepler-36c-histogram" title="Permalink to this heading">#</a></h1>
 <section id="setup-notebook">
 <h2>1. Setup Notebook<a class="headerlink" href="#setup-notebook" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -353,7 +352,8 @@ document.write(`
 <h2>2.3 Import Data<a class="headerlink" href="#import-data" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datadir</span> <span class="o">=</span> <span class="s1">&#39;../data/Kepler-36b&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define data dictionary</span>
+<span class="n">datadir</span> <span class="o">=</span> <span class="s1">&#39;../data/Kepler-36b&#39;</span>
 <span class="n">Kepler36c_PE</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">datadir</span><span class="si">}</span><span class="s1">/Kepler-36 b_Kepler-36 c_PE3000.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
 <span class="n">Kepler36c_CPML</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">datadir</span><span class="si">}</span><span class="s1">/Kepler-36 b_Kepler-36 c_CPML3000.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
 <span class="n">Kepler36c_PRV</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">datadir</span><span class="si">}</span><span class="s1">/Kepler-36 b_Kepler-36 c_PRV3000.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
@@ -366,13 +366,16 @@ document.write(`
 <h2>3. Plot Figure 3<a class="headerlink" href="#plot-figure-3" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">Kepler36c_PE</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predicted Minimum- PE&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the three predicted minima as histograms</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">Kepler36c_PE</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predicted Minimum- PE&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">Kepler36c_CPML</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;brown&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predicted Minimum-CPML&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">Kepler36c_PRV</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span><span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightsalmon&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Predicted Minimum-PRV&#39;</span><span class="p">)</span>
 
+<span class="c1"># Plot the measured mass as a histogram</span>
 <span class="n">expected_mass</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">7.13</span><span class="p">,</span> <span class="mf">0.18</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">expected_mass</span><span class="p">,</span>  <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Measured Mass&#39;</span><span class="p">)</span>
 
+<span class="c1"># Plot details</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probability Density&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Core Mass [M$_\oplus$]&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kepler 36c&#39;</span><span class="p">)</span>
@@ -382,7 +385,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7a913703a3e227c6b485b3f36e249bfd61eb8b62876f6e34f88f6e9415c73d0c.png" src="../_images/7a913703a3e227c6b485b3f36e249bfd61eb8b62876f6e34f88f6e9415c73d0c.png" />
+<img alt="../_images/d465125dbf81c405c38c92827461d7696e74e2d49c8e4df41385e89488c0f807.png" src="../_images/d465125dbf81c405c38c92827461d7696e74e2d49c8e4df41385e89488c0f807.png" />
 </div>
 </div>
 </section>
